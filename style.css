@@ -1,0 +1,284 @@
+/* Reset básico */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables para modo claro y oscuro */
+:root {
+  --color-primario: #ff5722;
+  --color-secundario: #4caf50;
+  --color-fondo: #ffffff;
+  --color-texto: #222222;
+  --color-error: #d32f2f;
+  --color-exito: #388e3c;
+  --color-link: var(--color-primario);
+  --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --transicion: 0.3s ease;
+}
+
+body {
+  font-family: var(--fuente-principal);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.header {
+  background-color: var(--color-primario);
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  
+}
+.header__1 {
+  color: white;
+  text-decoration: none;
+  font-weight: 900;
+  transition: color var(--transicion);
+
+}
+
+.inicio {
+  background: linear-gradient(250deg, var(--color-primario), var(--color-secundario));
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.inicio__title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.inicio__subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.testimonios {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.testimonios__titulo {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--color-primario);
+}
+
+.autor__testimonio{
+  color: var(--color-secundario);
+  font-weight: 900;
+}
+
+.testimonios__radio {
+  display: none;
+}
+
+
+.testimonios__contenedor {
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+}
+
+
+.testimonio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+ 
+  pointer-events: none;
+}
+
+/* Cuando el radio 1 está seleccionado, muestra testimonio 1 */
+#t1:checked ~ .testimonios__contenedor .testimonio__1 {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+  position: relative;
+}
+
+/* Cuando el radio 2 está seleccionado, muestra testimonio 2 */
+#t2:checked ~ .testimonios__contenedor .testimonio__2 {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+  position: relative;
+}
+
+/* Cuando el radio 3 está seleccionado, muestra testimonio 3 */
+#t3:checked ~ .testimonios__contenedor .testimonio__3 {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+  position: relative;
+}
+
+/* Estilos para los controles */
+.controles {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.control {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--color-primario);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.control:hover,
+.control:focus {
+  background-color: var(--color-secundario);
+  outline: none;
+}
+.registro {
+  max-width: 500px;
+  margin: 3rem auto 4rem;
+  padding: 0 1rem;
+}
+
+.registro__titulo {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-primario);
+  text-align: center;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formulario__registro {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario__label {
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.formulario__nombre,
+.formulario__select {
+  padding: 0.5rem 0.75rem;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color var(--transicion);
+}
+
+.formulario__input:focus,
+.formulario__select:focus {
+  border-color: var(--color-primario);
+  outline: none;
+}
+
+.formulario__nombre--error {
+  border-color: var(--color-error);
+  background-color: #ffe6e6;
+}
+
+.formulario__nombre--exito {
+  border-color: var(--color-exito);
+  background-color: #e6ffe6;
+}
+
+.formulario__error {
+  color: var(--color-error);
+  font-size: 0.85rem;
+  height: 1.2rem;
+  margin-top: 0.2rem;
+}
+
+.formulario__boton {
+  align-self: center;
+  width: 100px;
+}
+
+.formulario__mensaje {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 2rem;
+  color: var(--color-exito);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--color-primario);
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.footer__contenido {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer__redes {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.footer__link {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer__link:hover,
+.footer__link:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header__container {
+    flex-wrap: wrap;
+  }
+  .header__nav {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  .header__menu {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .hero__title {
+    font-size: 2rem;
+  }
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+  .registro {
+    margin: 2rem 1rem 3rem;
+  }
+}

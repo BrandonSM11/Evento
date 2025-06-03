@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Evento</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="page">
+
+  <header class="header">
+    <div class="container">
+      <nav class="nav" aria-label="Menú principal">
+        <ul class="menu">
+          <a href="#inicio" class="header__1">Inicio</a>
+          <a href="#testimonios" class="header__1">Testimonios</a>
+          <a href="#registro" class="header__1">Registro</a>
+        </ul>
+      </nav>
+      
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="inicio">
+      <div class="inicio__contenido">
+        <h1 class="inicio__title">Evento </h1>
+        <p class="inicio__subtitle"></p>
+        <a href="#registro" class="boton">Regístrate Ahora</a>
+      </div>
+    </section>
+
+    <section id="testimonios" class="testimonios">
+  <h2 class="testimonios__titulo">Testimonios</h2>
+  
+  <input type="radio" name="carrusel" id="t1" class="testimonios__radio" checked />
+  <input type="radio" name="carrusel" id="t2" class="testimonios__radio" />
+  <input type="radio" name="carrusel" id="t3" class="testimonios__radio" />
+
+  <div class="testimonios__contenedor">
+    <div class="testimonio testimonio__1">
+      <p class="texto__testimonio">"Buen evento"</p>
+      <p class="autor__testimonio">Brandon</p>
+    </div>
+    <div class="testimonio testimonio__2">
+      <p class="texto__testimonio">"Excelente organización"</p>
+      <p class="autor__testimonio">Carolina</p>
+    </div>
+    <div class="testimonio testimonio__3">
+      <p class="texto__testimonio">"Muy recomendable"</p>
+      <p class="autor__testimonio">Isa</p>
+    </div>
+  </div>
+
+  <div class="controles">
+    <label for="t1" class="control" aria-label="Testimonio 1"></label>
+    <label for="t2" class="control" aria-label="Testimonio 2"></label>
+    <label for="t3" class="control" aria-label="Testimonio 3"></label>
+  </div>
+</section>
+     <section id="registro" class="registro">
+      <h2 class="registro__titulo">Formulario de Registro</h2>
+        
+      <div class="formulario__registro">
+          
+          <label for="nombre" class="formulario__label">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" class="formulario__nombre" required aria-required="true" />
+          
+          <label for="correo" class="formulario__label">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" class="formulario__nombre" required aria-required="true" />
+          
+          <label for="ticket" class="formulario__label">Tipo de ticket</label>
+          <select id="ticket" name="ticket" class="formulario__select" required aria-required="true">
+            <option value="" disabled selected>Seleccione una opción</option>
+            <option value="general">General</option>
+            <option value="vip">VIP</option>
+            <option value="estudiante">Estudiante</option> 
+          </select>
+          </div>
+      <button type="submit" class="formulario__boton">Enviar</button>
+        <p class="formulario__mensaje"></p>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__contenido">
+      <p>© 2025 Evento. Todos los derechos reservados.</p>
+      <nav aria-label="Redes sociales">
+        <ul class="footer__redes">
+          <li><a href="#" class="#">Facebook</a></li>
+          <li><a href="#" class="#">Twitter</a></li>
+          <li><a href="#" class="#">Instagram</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+
+</body>
+</html>
